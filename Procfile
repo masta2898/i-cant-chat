@@ -1,0 +1,1 @@
+web: gunicorn i_cant_chat.wsgi

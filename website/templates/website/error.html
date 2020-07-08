@@ -1,0 +1,29 @@
+{% extends 'website/base.html' %}
+
+{% block menu %}
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a id="nickname-chat" class="nav-link website-nav-link" href="{% url 'website:index'}">Главная</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link website-nav-link" href="{% url 'website:news' %}">Новости проекта</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="website-block">
+    <div class="alert website-error-message text-center">
+        {% if error %}
+        <span class="text-muted justify-content-start mr-2">{{ error.code }}</span> 
+        <span class="justify-content-center">{{ error.text|linebreaksbr }}</span>
+        {% if error.details %}
+        <br />
+        <span class="justify-content-center">{{ error.details|linebreaksbr }}</span>
+        {% endif %}
+        {% else %}
+        Эта страница отрендерилась без ошибки... Скажу попроще, че ты тут делаешь???
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

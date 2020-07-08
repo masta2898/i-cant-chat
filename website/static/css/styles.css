@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Uni Sans Heavy";
+    src: url("../fonts/UniSansHeavy.ttf") format("opentype");
+}
+
+.website-header {
+    border-radius: 5px;
+    background-color: #728ad4;
+
+    font-family: "Uni Sans Heavy", arial;
+    font-weight: normal;
+    font-style: normal;
+
+    box-shadow: 0 0 3px rgba(114, 137, 218, 0.5);
+}
+
+a.website-nav-link:hover {
+    cursor: pointer;
+}
+
+.website-body {
+    background-color: #32353a;
+    color: #ffffff;
+    position: relative;
+}
+
+.website-footer {
+    padding: 5px;
+}
+
+.website-content {
+    padding: 5px;
+}
+
+a.website-link {
+    color: #99aab5;
+    padding-left: 5px;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a.website-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+}
+
+.website-block {
+    background-color: #3e4349;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.website-button {
+    background-color:   #728ad4;
+    color: #ffffff;
+    font-family: "Uni Sans Heavy", arial;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.website-button:hover {
+    background-color: #505d84;
+    color: #ffffff;
+    font-family: "Uni Sans Heavy", arial;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.website-message {
+    background-color: #32353a;
+    border: solid 2px;
+    border-color: #72767c;
+    color:  #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.website-info-message {
+    background-color: #32353a;
+    border: solid 2px;
+    border-color: #7289da;
+    color:  #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.website-warn-message {
+    background-color: #32353a;
+    border: solid 2px;
+    border-color:   #ffcc5c;
+    color:  #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.website-error-message {
+    background-color: #32353a;
+    border: solid 2px;
+    border-color:   #ff6f69;
+    color:  #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.website-message-text {
+    word-wrap: break-word;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3e4349;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #728ad4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #505d84;
+}
+
+.website-message-history {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.website-form-control {
+    background-color:   #32353a;
+    border: solid 2px;
+    border-color: #505d84;
+    color:  #ffffff;
+}
+
+.website-form-control:focus {
+    background-color:   #32353a;
+    border: solid 2px;
+    border-color: #728ad4;
+    color:  #ffffff;
+
+    box-shadow: 0 0 1px rgba(114, 137, 218, 0.5);
+}
+
+.website-error-text {
+    display: none;
+    color: #ff6f69;
+    word-wrap: break-word;
+}

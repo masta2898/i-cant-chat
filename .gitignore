@@ -1,0 +1,6 @@
+env/
+__pycache__/
+./*/__pycache__/
+db.sqlite3
+staticfiles/
+i_cant_chat/settings.py

@@ -1,0 +1,58 @@
+{% extends 'website/base.html' %}
+
+{% block menu %}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a id="nickname-chat" class="nav-link website-nav-link" href="{% url 'website:index'}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link website-nav-link" href="{% url 'website:news' %}">Новости проекта</a>
+                    </li>
+                </ul>
+{% endblock %}
+
+{% block content %}
+<div class="website-block"> <!-- description -->
+    Тут описание проекта
+    <a href="sfvf" class="website-link">vsfvsfvs</a>
+</div>
+{% if user.is_authenticated and discord_user %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="website-block"> <!-- username chat form -->
+            <form class="website-form">
+                {% csrf_token %}
+                <div class="d-flex">
+                    <label for="nickname" class="justify-content-start col-form-label">Никнейм:</label>
+                    <div class="w-100 mx-2 justify-content-center">
+                        <input id="nickname" type="text" name="nickname" class="form-control website-form-control" maxlength="32">
+                        <a id="set-original-nickname" class="text-muted small website-link">Оригинальный никнейм</a>
+                        <br/>
+                        <span id="nickname-error" class="small website-link website-error-text"></span>
+                        <span id="nickname-hint" class="small website-link website-hint-text"></span>
+                        <span id="nickname-info" class="small website-link website-info-text"></span>
+                    </div>
+                    <div class="justify-content-end">
+                        <a id="update-nickname" class="btn website-button">Обновить</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <ul id="message-history" class="website-block website-message-history"> <!-- messages history -->
+            {% include 'website/message_history.html' %}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <div class="website-block"> <!-- dynamic username form -->
+            <div class="alert website-info-message d-flex">
+              <span class="justify-content-center">Функция динамического никнейма находится в разработке.</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="website-block">
+    <a class="website-link discord-auth-link" href="{% url 'website:discord_auth_url' %}">Войдите с помощью Discord</a>, чтобы получить доступ к функционалу.
+</div>
+{% endif %}
+{% endblock %}

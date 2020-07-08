@@ -1,0 +1,14 @@
+{% if last_messages %}
+{% for message in last_messages %}
+<li class="alert website-message d-flex">
+    <span class="text-muted mr-2">{{ message.sent|date:"d/m/y P" }}</span> 
+    <span class="website-message-text">{{ message.text }}</span>
+</li>
+{% endfor %}
+{% else %}
+<li class="alert website-warn-message d-flex">
+    <span class="website-message-text">
+        Нет сообщений в базе.
+    </span>
+</li>
+{% endif %}

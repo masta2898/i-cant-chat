@@ -1,0 +1,28 @@
+{% extends 'website/base.html' %}
+
+{% block menu %}
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a id="nickname-chat" class="nav-link website-nav-link" href="{% url 'website:index' %}">Главная</a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link website-nav-link" href="{% url 'website:news' %}">Новости проекта</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="website-block"> <!-- dynamic username form -->
+    <div class="alert website-info-message d-flex">
+      <span claslis="justify-content-center">Раздел новостей находится в разработке.</span>
+    </div>
+</div>
+{% endblock %}
+
+{% block pagination %}
+{% if false %}
+<div class="website-block">
+                        
+</div>
+{% endif %}
+{% endblock %}
